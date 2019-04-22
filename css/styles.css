@@ -1,6 +1,7 @@
 html, body {
     width: 100%;
     max-width: 100%;
+    text-align: center;
     overflow-x: hidden;
     color: rgba(0, 0, 0, 0.5);
 }
@@ -22,39 +23,63 @@ h3 {
     }
 }
 
-.animating-image {
+.animating-image div {
     position: absolute;
-    background-image: url('../image/volcano-pic.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     left: 50%;
-    /* transform: translate(-50%, 0); */
     width: 120vw;
-    /* width: 100%; */
     z-index: -1;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     animation: shiftSideways 20s ease 0s infinite alternate forwards;
 }
 
-.animating-image-container {
+.volcano-pic div {
+    background-image: url('../image/volcano-pic.jpg');
+}
+
+.boat-pic div {
+    background-image: url('../image/boat.png');
+}
+
+.street-pic {
+    margin: 32px 0 0  0;
+}
+
+
+.street-pic div {
+    background-image: url('../image/street-pic.jpg');
+}
+
+.philosophy {
+    color: white;
+    height: 100%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 32px;
+}
+
+.philosophy div {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.animating-image {
     position: relative;
 }
 
-.main-title, .animating-image {
+.animating-image div,  .animating-image + div {
     min-height: 100vh;
 }
 
 .main-title {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    text-align: center;
     padding: 32px;
 }
 
 .main-title h1 {
     font-size: 92px;
     color: rgba(255, 255, 255, 1.0);
-    margin: 32px 0 0 0;
+    margin: 64px 0 0 0;
 }
 
 .main-title p {
@@ -73,24 +98,26 @@ h3 {
     padding: 32px 0;
 }
 
-.colored.dark {
+.contact {
     background-color: rgb(67, 66, 66);
     color: white;
-    padding: 0;
+    padding: 8px 0;
+    margin: 0;
 }
 
 .introduction {
     margin: 32px 0;
 }
 
+ h2 {
+     font-size: 48px;
+ }
+
 .introduction h2 {
-    text-align: center;
-    font-size: 48px;
     margin: 16px 0;
 }
 
-.company, .skills {
-    text-align: center;
+.philosophy, .company, .skills {
 }
 
 .company h3 {
@@ -259,6 +286,11 @@ h3 {
         border-color: rgba(255, 255, 255, 0.9);
     }
 }
+
+.street-picture {
+    position: relative;
+}
+
 
 @media screen and (max-width: 576px) {
     .skills h3 {
