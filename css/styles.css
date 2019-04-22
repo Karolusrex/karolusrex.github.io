@@ -9,10 +9,6 @@ h3 {
     font-size: 24px;
 }
 
-.skills p {
-    font-family: 'Source Code Pro', monospace;
-}
-
 * {
     font-family: 'Lato', sans-serif;
 }
@@ -28,13 +24,13 @@ h3 {
 
 .animating-image {
     position: absolute;
-    background-image: url('../image/volcano-pic.png');
+    background-image: url('../image/volcano-pic.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     left: 50%;
     /* transform: translate(-50%, 0); */
-    width: 240vw;
+    width: 120vw;
     /* width: 100%; */
     z-index: -1;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
@@ -52,14 +48,12 @@ h3 {
 .main-title {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     text-align: center;
-    /* padding: 32px; */
     padding: 32px;
 }
 
 .main-title h1 {
     font-size: 92px;
     color: rgba(255, 255, 255, 1.0);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     margin: 32px 0 0 0;
 }
 
@@ -69,71 +63,88 @@ h3 {
     color: rgb(255, 255, 255);
 }
 
-.keyboard-container {
+.phone-container .graduation-container, .keyboard-container {
     position: relative;
 }
 
 .colored {
     background-color: rgb(243, 239, 224);
-    margin: 128px 0 0 0;
+    margin: 64px 0 0 0;
     padding: 32px 0;
 }
 
+.colored.dark {
+    background-color: rgb(67, 66, 66);
+    color: white;
+    padding: 0;
+}
+
 .introduction {
-    margin: 12.5vh 0 0 0;
-    height: 50vh;
+    margin: 32px 0;
 }
 
 .introduction h2 {
     text-align: center;
     font-size: 48px;
+    margin: 16px 0;
 }
 
-.experience, .skills {
+.company, .skills {
     text-align: center;
 }
 
-.experience h3 {
+.company h3 {
     color: rgb(244, 80, 154);
     font-size: 24px;
     font-weight: 900;
     margin-bottom: 8px;
 }
 
-.experience ul {
+.company ul {
+    padding: 0;
     list-style-type: none;
     font-weight: 900;
 }
 
-.experience li::after, .experience li::before {
+.company li::after, .company li::before {
     margin: 0 8px;
     font-size: 22px;
     /* font-family: 'Source Code Pro', monospace; */
 }
 
-.experience p {
-    line-height: 200%;
+.company p {
+    line-height: 150%;
 }
 
-.company:first-child {
-    border-top: 2px solid rgba(255, 255, 255, 0.9);
+.colored .company {
+    border-color: rgba(255, 255, 255, 0.9);
 }
 
 .company {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
-    padding-bottom: 4px;
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
-.experience li::before {
+.company:first-child {
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+.company:not(:last-child) {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    padding: 8px 0 12px 0;
+}
+
+.company li::before {
     content: "»";
 }
 
-.experience li::after {
+.company li::after {
     content: "«";
 }
 
-.experience li {
-    margin: 16px;
+.company li {
+    margin: 8px 0;
 }
 
 .company-name {
@@ -142,11 +153,11 @@ h3 {
     font-weight: 100;
 }
 
-.working, .keyboard {
+.phone, .graduation, .working, .keyboard {
     min-height: 256px;
 }
 
-.working::before, .working::after, .keyboard::before, .keyboard::after {
+.phone::before, .phone::after, .graduation::before, .graduation::after, .working::before, .working::after, .keyboard::before, .keyboard::after {
     content: "";
     position: absolute;
     top: 0;
@@ -155,11 +166,16 @@ h3 {
     height: 256px;
 }
 
-.working::after, .keyboard::after {
+.phone::after, .graduation::after, .working::after, .keyboard::after {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
     z-index: -2;
+}
+
+.phone::after {
+    background-position: center;
+    background-image: url('../image/phone.png');
 }
 
 .working::after {
@@ -170,7 +186,12 @@ h3 {
     background-image: url('../image/keyboard.png');
 }
 
-.keyboard::before {
+.graduation::after {
+    background-position: center;
+    background-image: url('../image/graduation.png');
+}
+
+.graduation::before, .keyboard::before {
     z-index: -1;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,ffffff+100&0.5+0,0.6+14,0.65+26,0.7+39,0.9+54,1+69,1+83,0.3+95 */
     background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.6) 14%, rgba(255, 255, 255, 0.65) 26%, rgba(255, 255, 255, 0.7) 39%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.9) 54%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 83%, rgba(255, 255, 255, 0.3) 95%, rgba(255, 255, 255, 0.3) 100%);
@@ -178,6 +199,19 @@ h3 {
     background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.6) 14%, rgba(255, 255, 255, 0.65) 26%, rgba(255, 255, 255, 0.7) 39%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.9) 54%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 83%, rgba(255, 255, 255, 0.3) 95%, rgba(255, 255, 255, 0.3) 100%);
     /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.6) 14%, rgba(255, 255, 255, 0.65) 26%, rgba(255, 255, 255, 0.7) 39%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.9) 54%, rgba(255, 255, 255, 1) 69%, rgba(255, 255, 255, 1) 83%, rgba(255, 255, 255, 0.3) 95%, rgba(255, 255, 255, 0.3) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#4dffffff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.phone::before {
+    z-index: -1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,ffffff+100&0.5+0,0.6+14,0.65+26,0.7+39,0.9+54,1+69,1+83,0.3+95 */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(67, 66, 66, 0.2) 0%, rgba(67, 66, 66, 0.3) 14%, rgba(67, 66, 66, 0.5) 26%, rgba(67, 66, 66, 0.6) 39%, rgba(67, 66, 66, 0.7) 50%, rgba(67, 66, 66, 0.8) 54%, rgba(67, 66, 66, 0.95) 69%, rgba(67, 66, 66, 0.9) 83%, rgba(67, 66, 66, 1.0) 95%, rgba(67, 66, 66, 0.3) 100%);
+    /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(67, 66, 66, 0.2) 0%, rgba(67, 66, 66, 0.3) 14%, rgba(67, 66, 66, 0.5) 26%, rgba(67, 66, 66, 0.6) 39%, rgba(67, 66, 66, 0.7) 50%, rgba(67, 66, 66, 0.8) 54%, rgba(67, 66, 66, 0.95) 69%, rgba(67, 66, 66, 0.9) 83%, rgba(67, 66, 66, 1.0) 95%, rgba(67, 66, 66, 0.3) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(67, 66, 66, 0.2) 0%, rgba(67, 66, 66, 0.3) 14%, rgba(67, 66, 66, 0.5) 26%, rgba(67, 66, 66, 0.6) 39%, rgba(67, 66, 66, 0.7) 50%, rgba(67, 66, 66, 0.8) 54%, rgba(67, 66, 66, 0.95) 69%, rgba(67, 66, 66, 0.9) 83%, rgba(67, 66, 66, 1.0) 95%, rgba(67, 66, 66, 0.3) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#4dffffff', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
@@ -198,7 +232,7 @@ h3 {
 
 .skills h2 {
     font-size: 36px;
-    margin: 48px 0;
+    margin: 32px 0;
 }
 
 .skills h3 {
@@ -207,7 +241,7 @@ h3 {
 }
 
 .hidden-until-scrolled {
-    transition: transform 300ms;
+    transition: transform 200ms;
     transform: scale(0);
 }
 
@@ -215,8 +249,29 @@ h3 {
     transform: scale(1);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     .main-title h1 {
         font-size: 72px;
     }
+    .company .col-md-6:first-child {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .skills h3 {
+        margin: 16px 0 0 0;
+    }
+    .phone, .graduation, .working, .keyboard {
+        min-height: 224px;
+    }
+    .phone::before, .phone::after, .graduation::before, .graduation::after, .working::before, .working::after, .keyboard::before, .keyboard::after {
+        height: 224px;
+    }
+}
+
+a {
+    color: rgb(244, 80, 154);
 }

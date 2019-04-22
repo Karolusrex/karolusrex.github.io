@@ -1,0 +1,4 @@
+.hidden-until-scrolled {
+    /* Since we can't reveal element when they're scrolled, make sure they're always there */
+    transform: scale(1);
+}

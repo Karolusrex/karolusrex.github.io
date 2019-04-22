@@ -3,10 +3,9 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro"
-      rel="stylesheet"
-    />
+    <noscript>
+      <link rel="stylesheet" href="css/noscript.css" />
+    </noscript>
     <link
       href="https://fonts.googleapis.com/css?family=Lato"
       rel="stylesheet"
@@ -19,7 +18,7 @@
       <div class="animating-image"></div>
     </div>
     <div
-      class="d-flex justify-content-center flex-column align-content-center main-title"
+      class="d-flex justify-content-center flex-column align-items-center main-title"
     >
       <h1>
         Karl's Resumé
@@ -29,18 +28,18 @@
     </div>
     <div class="container introduction hidden-until-scrolled">
       <div class="row justify-content-center align-items-center">
-        <div class="col-md-3">
+        <div class="col-sm-6 col-md-4">
           <h2>Knowledge &amp; skills</h2>
         </div>
-        <div class="col-md-3 keyboard-container">
-          <div class=" keyboard"></div>
+        <div class="col-sm-6 col-md-4 keyboard-container">
+          <div class="keyboard"></div>
         </div>
       </div>
     </div>
     <div class="container skills">
       <div>
-        <div class="row hidden-until-scrolled">
-          <div class="col-md-4">
+        <div class="row hidden-until-scrolled justify-content-center">
+          <div class="col-sm-6 col-md-3">
             <h3>Frontend</h3>
             <div>
               <p>React</p>
@@ -49,7 +48,7 @@
               <p>UX</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-6 col-md-3">
             <h3>Backend</h3>
             <div>
               <p>NodeJS</p>
@@ -57,7 +56,7 @@
               <p>MySQL</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-4 col-md-3">
             <h3>Ops</h3>
             <div>
               <p>Bash</p>
@@ -72,10 +71,10 @@
     <div class="colored">
       <div class="container introduction hidden-until-scrolled">
         <div class="row justify-content-center align-items-center">
-          <div class="col-md-3 order-md-last">
+          <div class="col-sm-6 col-md-4 order-md-last">
             <h2>Prior Experience</h2>
           </div>
-          <div class="col-md-3 keyboard-container">
+          <div class="col-sm-6 col-md-4 keyboard-container">
             <div class="working"></div>
           </div>
         </div>
@@ -87,23 +86,24 @@
               <h3>
                 Dev lead
               </h3>
-              <p class="company-name">Nationale Nederlanden</p>
+              <p class="company-name">
+                Nationale Nederlanden, 2018 - 2019
+              </p>
             </div>
 
             <div class="col-md-6">
               <p>
-                I can contribute to a project with more than just code. Most
-                often, it benefits all parties when the developer is engaged on
-                different levels, but also given enough space to build things.
-                For Nationale Nederlanden, striking this balance was extremely
-                important.
+                I can contribute to a project with more than just code.
+                Developer business involvement often helps, as long as the
+                software constraints get enough focus. For Nationale
+                Nederlanden, striking this balance was extremely important.
               </p>
             </div>
             <div class="col-md-6">
               <ul>
-                <li>Coaching and controlling code quality</li>
+                <li>Coaching code quality</li>
                 <li>From scractch full-stack setup</li>
-                <li>Vue JS &amp; NodeJS</li>
+                <li>VueJS &amp; NodeJS</li>
                 <li>DevOps coaching</li>
               </ul>
             </div>
@@ -113,50 +113,161 @@
               <h3>
                 Dev lead
               </h3>
-              <p class="company-name">Bizboard</p>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li>Various lead dev tasks</li>
-                <li>Front end framework development</li>
-                <li>Numerous of consumer-facing apps</li>
-                <li>Direct client interactions</li>
-              </ul>
+              <p class="company-name">Bizboard, 2015 - 2018</p>
             </div>
             <div class="col-md-6">
               <p>
                 Working at a startup often requires a very agile mindset. This
-                means trying to fix problems before they showed up, and
-                constantly revise development strategies. I quickly became
-                responsible for the core framework that we built all our
-                software upon, which was a very important task at that time.
+                means trying to fix problems before they show up, and constantly
+                revising development strategies. I quickly became responsible
+                for the core framework that we built all our software upon,
+                which was a very important task at that time.
               </p>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li>Various lead dev tasks</li>
+                <li>Framework API development</li>
+                <li>Various Consumer-facing apps</li>
+                <li>Direct client interactions</li>
+              </ul>
             </div>
           </div>
           <div class="company row hidden-until-scrolled align-items-center">
-            <div class="col-12">
-              <h3>
-                Dev lead
-              </h3>
-              <p class="company-name">Bizboard</p>
-            </div>
             <div class="col-md-6">
+              <h3>
+                Data Migrator
+              </h3>
+              <p class="company-name">TTC, 2015</p>
               <ul>
-                <li>Various lead dev tasks</li>
-                <li>Front end framework development</li>
-                <li>Numerous of consumer-facing apps</li>
-                <li>Direct client interactions</li>
+                <li>Exploration of data models</li>
+                <li>NodeJS</li>
+                <li>Web 3.0</li>
               </ul>
             </div>
             <div class="col-md-6">
-              <p>
-                Working at a startup often requires a very agile mindset. This
-                means trying to fix problems before they showed up, and
-                constantly revise development strategies. I quickly became
-                responsible for the core framework that we built all our
-                software upon, which was a very important task at that time.
-              </p>
+              <h3>
+                Research assistant
+              </h3>
+              <p class="company-name">Vrije Universiteit, 2014-2015</p>
+              <ul>
+                <li>Modeling data center carbon footprints</li>
+                <li>Paper published</li>
+                <li>PHP/HTML</li>
+              </ul>
             </div>
+          </div>
+          <div class="company row hidden-until-scrolled align-items-center">
+            <div class="col-md-6">
+              <h3>
+                Teaching assistant
+              </h3>
+              <p class="company-name">Vrije Universiteit, 2014</p>
+              <ul>
+                <li>Machine learning</li>
+                <li>Grading reports</li>
+                <li>Giving classes</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h3>
+                Software developer
+              </h3>
+              <p class="company-name">Sectra, 2013</p>
+              <ul>
+                <li>PHP/HTML</li>
+                <li>Python</li>
+                <li>Web</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container introduction hidden-until-scrolled">
+      <div
+        class="row justify-content-center align-items-center align-content-center"
+      >
+        <div class="col-sm-6 col-md-4">
+          <h2>Education</h2>
+        </div>
+        <div class="col-5 col-sm-6 col-md-3 graduation-container">
+          <div class="graduation"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="company row hidden-until-scrolled align-items-center">
+        <div class="col-12">
+          <h3>
+            Msc, Artificial intelligence
+          </h3>
+          <p class="company-name">Vrije Universiteit</p>
+        </div>
+
+        <div class="col-md-6">
+          <p>
+            I thrived in this environment because of the vast exposure to
+            different concepts. Due to the variety, I developed an ability to
+            distinguish importance. Although data science is not my passion, the
+            Master's degree gave me a really solid understanding of the
+            underlying principles.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Deeply tecnical coursework</li>
+            <li>Cum Laude distinction</li>
+            <li>Scholarship granted</li>
+          </ul>
+        </div>
+      </div>
+      <div class="company row hidden-until-scrolled align-items-center">
+        <div class="col-12">
+          <h3>
+            Bachelors, Information Technology
+          </h3>
+          <p class="company-name">Linköpings Universitet</p>
+        </div>
+
+        <div class="col-md-6">
+          <p>
+            My bachelors offered a lot of math courses to help me activate my
+            crude thinking capabilities. My first university experience also
+            exposed me to the variety of personality and culture in a diverse
+            group of people. Eventually, this made me move abroad to expand my
+            mindset horizons.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Side-job as a group coach</li>
+            <li>Playing in a university orchestra</li>
+            <li>Spokesman in course feedback group</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="colored dark">
+      <div class="container introduction hidden-until-scrolled">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-6 col-md-4">
+            <h2>Contact</h2>
+          </div>
+          <div class="col-5 col-sm-6 col-md-2 phone-container">
+            <div class="phone"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div
+          class="row hidden-until-scrolled justify-content-center align-items-center"
+        >
+          <div class="col-md-3">
+            <p>
+              Reach out to me by
+              <a href="mailto:kalle.lundfall@gmail.com">email</a>
+            </p>
           </div>
         </div>
       </div>
