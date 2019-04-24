@@ -1,79 +1,64 @@
-"use strict";
+const modalTargetAttribute = "data-target-modal";
+const closeButtonClass = "close-button";
+const modalClass = "modal";
+const loadModalClass = "load-modal";
+const modalShowingClass = "showing";
+const unscrollableClass = "unscrollable";
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+const mainContent = document.getElementById("scrollable-content");
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+let currentlyShowingModal;
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-var modalTargetAttribute = "data-target-modal";
-var closeButtonClass = "close-button";
-var modalClass = "modal";
-var loadModalClass = "load-modal";
-var modalShowingClass = "showing";
-var unscrollableClass = 'unscrollable';
-var mainContent = document.getElementById('scrollable-content');
-var currentlyShowingModal;
-
-var showModal = function showModal(modal) {
+const showModal = modal => {
   modal.classList.add(modalShowingClass);
   currentlyShowingModal = modal;
   mainContent.classList.add(unscrollableClass);
 };
 
-var hideModal = function hideModal(modal) {
+const hideModal = modal => {
   modal.classList.remove(modalShowingClass);
   currentlyShowingModal = null;
   mainContent.classList.remove(unscrollableClass);
 };
+
 /* Close modal when click on dark background */
-
-
-_toConsumableArray(document.getElementsByClassName(modalClass)).forEach(function (element) {
-  element.addEventListener("click", function (event) {
+[...document.getElementsByClassName(modalClass)].forEach(element => {
+  element.addEventListener("click", event => {
     if (event.target !== element) {
       return;
     }
-
     hideModal(element);
   });
 });
+
 /* Close modal when click on X */
-
-
-_toConsumableArray(document.getElementsByClassName(closeButtonClass)).forEach(function (element) {
-  element.addEventListener("click", function () {
-    var modal = element.parentNode.parentNode;
-
+[...document.getElementsByClassName(closeButtonClass)].forEach(element => {
+  element.addEventListener("click", () => {
+    const modal = element.parentNode.parentNode;
     if (!modal.classList.contains(modalClass)) {
       throw new Error("Incorrect DOM structure!");
     }
-
     hideModal(modal);
   });
 });
+
 /* Open modal when click on button */
-
-
-_toConsumableArray(document.getElementsByClassName(loadModalClass)).forEach(function (element) {
-  element.addEventListener("click", function () {
-    var targetId = element.getAttribute(modalTargetAttribute);
-    var target = document.getElementById(targetId);
-
+[...document.getElementsByClassName(loadModalClass)].forEach(element => {
+  element.addEventListener("click", () => {
+    const targetId = element.getAttribute(modalTargetAttribute);
+    const target = document.getElementById(targetId);
     if (!target) {
-      throw new Error("Unable to find modal target: ".concat(targetId));
+      throw new Error(`Unable to find modal target: ${targetId}`);
     }
-
-    currentlyShowingModal && currentlyShowingModal !== target && hideModal(currentlyShowingModal);
+    currentlyShowingModal &&
+      currentlyShowingModal !== target &&
+      hideModal(currentlyShowingModal);
     showModal(target);
   });
 });
 
-document.onkeydown = function (event) {
+document.onkeydown = event => {
   event = event || window.event;
-
   if (event.keyCode == 27 && currentlyShowingModal) {
     hideModal(currentlyShowingModal);
   }
