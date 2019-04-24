@@ -18,6 +18,7 @@ const showModal = modal => {
 const hideModal = modal => {
   modal.classList.remove(modalShowingClass);
   currentlyShowingModal = null;
+  document.exitFullscreen && document.exitFullscreen()
   mainContent.classList.remove(unscrollableClass);
 };
 
