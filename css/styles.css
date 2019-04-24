@@ -8,6 +8,10 @@ html, body {
 
 h3 {
     font-size: 24px;
+    color: rgb(244, 80, 154);
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 8px;
 }
 
 * {
@@ -149,15 +153,7 @@ h3 {
     margin: 16px 0;
 }
 
-.philosophy, .company, .skills {
-}
-
-.company h3 {
-    color: rgb(244, 80, 154);
-    font-size: 24px;
-    font-weight: 900;
-    margin-bottom: 8px;
-}
+.philosophy, .company, .skills {}
 
 .company ul {
     padding: 0;
@@ -340,3 +336,85 @@ a {
     color: rgb(244, 80, 154);
 }
 
+.logo-card {
+    width: auto;
+    height: 64px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.156863) -1px 0px 4px;
+    margin: 0 12px 12px 0;
+    background: white;
+}
+
+.modal .logo-card {
+    min-height: 80px;
+}
+
+.portfolio .logo-card {
+    
+    transition: transform 100ms;
+    cursor: pointer;
+}
+
+.portfolio .logo-card:hover {
+    transform: scale(1.2);
+}
+
+.expandable {
+    display: none;
+}
+
+.modal>* {
+    background: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+}
+
+.close-button::after {
+    content: "✕";
+}
+
+.close-button:hover::after {
+    color:black;
+}
+
+.close-button {
+    position: fixed;
+    width:24px;
+    height:24px;
+    z-index: 2;
+    right: 26px;
+    top: 24px;
+    cursor: pointer;
+}
+
+.modal {
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal.showing {
+    visibility: inherit;
+}
+
+.portfolio-description {
+    line-height: 200%;
+}
