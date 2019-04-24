@@ -303,32 +303,11 @@ h2 {
     transform: scale(1);
 }
 
-@media screen and (max-width: 768px) {
-    .main-title h1 {
-        font-size: 72px;
-    }
-    .company .col-md-6:first-child {
-        border-bottom-width: 2px;
-        border-bottom-style: solid;
-        border-color: rgba(255, 255, 255, 0.9);
-    }
-}
 
 .street-picture {
     position: relative;
 }
 
-@media screen and (max-width: 576px) {
-    .skills h3 {
-        margin: 16px 0 0 0;
-    }
-    .phone, .graduation, .working, .keyboard {
-        min-height: 224px;
-    }
-    .phone::before, .phone::after, .graduation::before, .graduation::after, .working::before, .working::after, .keyboard::before, .keyboard::after {
-        height: 224px;
-    }
-}
 
 a {
     color: rgb(244, 80, 154);
@@ -345,6 +324,7 @@ a {
 
 .modal .logo-card {
     min-height: 80px;
+    max-width: 90%;
 }
 
 .portfolio .logo-card {
@@ -365,7 +345,7 @@ a {
     background: white;
     border-radius: 4px;
     position: absolute;
-    top: 16px;
+    top: 64px;
     left: 16px;
     right: 16px;
 }
@@ -379,13 +359,14 @@ a {
 }
 
 .close-button {
-    position: fixed;
+        font-size:24px;
+        position: absolute;
     width:24px;
     height:24px;
     z-index: 2;
-    right: 26px;
-    top: 24px;
-    cursor: pointer;
+    right: 8px;
+        top: 4px;
+        cursor: pointer;
 }
 
 .modal {
@@ -415,4 +396,32 @@ a {
 
 .portfolio-description {
     line-height: 200%;
+}
+
+@media screen and (max-width: 768px) {
+    .main-title h1 {
+        font-size: 72px;
+    }
+    .company .col-md-6:first-child {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .close-button {
+        right: 4px;
+        width:36px;
+        height:36px;
+    }
+    .skills h3 {
+        margin: 16px 0 0 0;
+    }
+    .phone, .graduation, .working, .keyboard {
+        min-height: 224px;
+    }
+    .phone::before, .phone::after, .graduation::before, .graduation::after, .working::before, .working::after, .keyboard::before, .keyboard::after {
+        height: 224px;
+    }
 }
