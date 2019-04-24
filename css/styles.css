@@ -63,9 +63,8 @@ h3 {
 }
 
 .street-pic {
-    margin: 32px 0 0  0;
+    margin: 32px 0 0 0;
 }
-
 
 .street-pic div {
     background-image: url('../image/street-pic.jpg');
@@ -87,7 +86,7 @@ h3 {
     position: relative;
 }
 
-.animating-image div,  .animating-image + div {
+.animating-image div, .animating-image+div {
     min-height: 100vh;
 }
 
@@ -118,7 +117,7 @@ h3 {
 }
 
 .call-to-action {
-    width:100%;
+    width: 100%;
     margin-top: auto;
     flex-basis: 10%;
     flex-grow: 1;
@@ -145,9 +144,9 @@ h3 {
     margin: 32px 0;
 }
 
- h2 {
-     font-size: 48px;
- }
+h2 {
+    font-size: 48px;
+}
 
 .introduction h2 {
     margin: 16px 0;
@@ -318,7 +317,6 @@ h3 {
 .street-picture {
     position: relative;
 }
-
 
 @media screen and (max-width: 576px) {
     .skills h3 {
