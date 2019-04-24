@@ -18,10 +18,10 @@ _toConsumableArray(document.getElementsByClassName(expandClass)).forEach(functio
     var target = document.getElementById(targetId);
 
     if (!target) {
-      throw new Error("Unable to find target: ".concat(target));
+      throw new Error("Unable to find expandable target: ".concat(targetId));
     }
 
-    target.classList.remove('expandable');
+    target.classList.remove("expandable");
     element.parentNode.removeChild(element);
     checkScrollyElements();
   });

@@ -20,7 +20,9 @@
   <body>
     <script src="js/expandable.js" defer></script>
     <script src="js/scrolly.js" defer></script>
+    <script src="js/shapeshifter.js" defer></script>
     <script src="js/modal.js" defer></script>
+    <div>
     <div class="modal" id="igb">
       <div>
         <div class="close-button"></div>
@@ -108,12 +110,11 @@
               <div>
                 <p class="portfolio-description">
                   I designed and coded the web site of my band, keeping
-                  everything stupid simple. The DNS is not yet properly setup
-                  but you can check it out
+                  everything stupid simple. If you're interested in my band you can see the website
                   <a
                     href="https://the-ninth-bar.firebaseapp.com"
                     target="_blank"
-                    >here</a
+                    >here!</a
                   >
                 </p>
               </div>
@@ -202,6 +203,18 @@
         </div>
       </div>
     </div>
+    <div class="modal" id="shapeshifter-game" >
+      <div>
+        <div class="close-button"></div>
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-12">
+                <iframe id="shapeshifter-iframe"></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
     <div class="modal" id="shapeshifter">
       <div>
         <div class="close-button"></div>
@@ -219,6 +232,14 @@
                   stage to the next, avoiding collisions and solving the puzzle.
                   I also made a level generator that solves a mathematical
                   graph-problem to generate infinite level and gameplay.
+
+                  <a
+        class="expand load-modal"
+        data-target-modal="shapeshifter-game"
+        id="load-shapeshifter"
+        href="javascript:void(0)"
+        >Click here to load the game inside this window</a>
+        
                 </p>
               </div>
             </div>
@@ -230,6 +251,7 @@
               />
             </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -418,6 +440,8 @@
         </div>
       </div>
     </div>
+    </div>
+    <div id="scrollable-content">
     <div class="animating-image volcano-pic">
       <!-- Empty div for image insertion -->
       <div></div>
@@ -503,85 +527,85 @@
         class="container d-flex portfolio flex-wrap justify-content-center hidden-until-scrolled"
       >
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="examtrainer"
           src="image/logos/examtrainer.png"
           data-target-modal="examtrainer"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="igb"
           src="image/logos/igb.png"
           data-target-modal="igb"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="nn"
           src="image/logos/nn.png"
           data-target-modal="nn"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="arva"
           src="image/logos/arva.png"
           data-target-modal="arva"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="shapeshifter"
           src="image/logos/shapeshifter.png"
           data-target-modal="shapeshifter"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="tradesquare"
           src="image/logos/tradesquare.png"
           data-target-modal="tradesquare"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="kitty"
           src="image/logos/kitty.svg"
           data-target-modal="kitty"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="repper"
           src="image/logos/repper.png"
           data-target-modal="repper"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="ninthbar"
           src="image/logos/ninthbar.png"
           data-target-modal="ninthbar"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="mrbox"
           src="image/logos/mrbox.png"
           data-target-modal="mrbox"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="ikano"
           src="image/logos/ikano.png"
           data-target-modal="ikano"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="legalbikes"
           src="image/logos/legalbikes.png"
           data-target-modal="legalbikes"
         />
-        <img class="logo-card" alt="rabobank" src="image/logos/rabobank.png" 
+        <img class="logo-card load-modal" alt="rabobank" src="image/logos/rabobank.png" 
         data-target-modal="rabobank"
         />
-        <img class="logo-card" alt="Green practices" src="image/logos/ict4d.png" 
+        <img class="logo-card load-modal" alt="Green practices" src="image/logos/ict4d.png" 
         data-target-modal="ict4d"
         />
         <img
-          class="logo-card"
+          class="logo-card load-modal"
           alt="ing"
           src="image/logos/ing.png"
           data-target-modal="ing"
@@ -833,6 +857,7 @@
             </p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </body>

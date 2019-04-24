@@ -9,7 +9,7 @@ const expandableClass = "expandable";
     if (!target) {
       throw new Error(`Unable to find expandable target: ${targetId}`);
     }
-    target.classList.remove('expandable');
+    target.classList.remove("expandable");
     element.parentNode.removeChild(element);
     checkScrollyElements();
   });
