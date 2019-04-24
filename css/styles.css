@@ -320,27 +320,34 @@ a {
     color: rgb(244, 80, 154);
 }
 
-.logo-card {
-    width: auto;
-    height: 64px;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.156863) -1px 0px 4px;
+.logo-container {
+    
     margin: 0 12px 12px 0;
     background: white;
+    height: 128px;
+    width: 128px;
+    display: flex;
 }
 
-.modal .logo-card {
-    min-height: 80px;
-    max-width: 90%;
+.portfolio .logo-container {
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.156863) -1px 0px 4px;
 }
 
-.portfolio .logo-card {
-    
+.logo-card {
+    display: block;
+    width: 100%;
+    margin: auto 0;
+    height: auto;
+}
+
+
+.portfolio .logo-container {
     transition: transform 100ms;
     cursor: pointer;
 }
 
-.portfolio .logo-card:hover {
+.portfolio .logo-container:hover {
     transform: scale(1.2);
 }
 
