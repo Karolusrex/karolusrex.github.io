@@ -840,6 +840,7 @@
 	}
 }());
 
+// Only activate for iphone
 if(!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)){
     new FastClick(document.documentElement);
 }
