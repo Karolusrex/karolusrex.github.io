@@ -451,6 +451,9 @@ a {
     pointer-events: none;
 }
 
+.show-for-iphone {
+    display: none;
+}
 
 @media screen and (max-width: 576px) {
     .close-button {

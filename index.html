@@ -24,6 +24,7 @@
   <body>
     <script src="js/fastclick.js" defer></script>
     <script src="js/expandable.js" defer></script>
+    <script src="js/show-for-iphone.js" defer></script>
     <script src="js/scrolly.js" defer></script>
     <script src="js/shapeshifter.js" defer></script>
     <script src="js/modal.js" defer></script>
@@ -261,14 +262,23 @@
                     solving the puzzle. I also made a level generator that
                     solves a mathematical graph-problem to generate infinite
                     level and gameplay.
-
-                    <a
-                      class="load-modal"
-                      data-target-modal="shapeshifter-game"
-                      id="load-shapeshifter"
-                      href="javascript:void(0)"
-                      >Click here to load the game inside this window</a
+                    <div class="hide-for-iphone">
+                      <a
+                        class="load-modal"
+                        data-target-modal="shapeshifter-game"
+                        id="load-shapeshifter"
+                        href="javascript:void(0)"
+                        >Click here to load the game inside this window</a
+                      >
+                  </div>
+                  <div class="show-for-iphone">
+                    You can play the game 
+                      <a
+                      target="_blank"
+                      href="https://shape-shifter-app.firebaseapp.com"
+                      >here</a
                     >
+                    </div>
                   </p>
                 </div>
               </div>
