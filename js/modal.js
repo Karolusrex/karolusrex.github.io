@@ -29,6 +29,16 @@ var hideModal = function hideModal(modal) {
   document.exitFullscreen && document.exitFullscreen();
   mainContent.classList.remove(unscrollableClass);
 };
+
+if (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+  document.addEventListener("touchmove", function (event) {
+    if (currentlyShowingModal && mainContent.contains(event.target)) {
+      event.preventDefault();
+    }
+  }, {
+    passive: false
+  });
+}
 /* Close modal when click on dark background */
 
 

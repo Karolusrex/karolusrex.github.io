@@ -18,9 +18,21 @@ const showModal = modal => {
 const hideModal = modal => {
   modal.classList.remove(modalShowingClass);
   currentlyShowingModal = null;
-  document.exitFullscreen && document.exitFullscreen()
+  document.exitFullscreen && document.exitFullscreen();
   mainContent.classList.remove(unscrollableClass);
 };
+
+if (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+  document.addEventListener(
+    "touchmove",
+    event => {
+      if (currentlyShowingModal && mainContent.contains(event.target)) {
+        event.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+}
 
 /* Close modal when click on dark background */
 [...document.getElementsByClassName(modalClass)].forEach(element => {
