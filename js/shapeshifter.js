@@ -3,6 +3,7 @@
 var trigger = document.getElementById("load-shapeshifter");
 var iframe = document.getElementById("shapeshifter-iframe");
 trigger.addEventListener("click", function () {
+  //Go to full screen only for android
   if (/(android)/i.test(navigator.userAgent)) {
     document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
   }
