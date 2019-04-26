@@ -361,7 +361,7 @@ a {
     background: white;
     border-radius: 4px;
     position: absolute;
-    top: 64px;
+    top: 32px;
     left: 16px;
     right: 16px;
 }
@@ -420,8 +420,8 @@ a {
 }
 
 #shapeshifter-iframe {
-    height: calc(100vh - 128px);
-    width: min(400px, 100vw)
+    height: calc(100vh - 64px);
+    width: 400px;
 }
 
 @media screen and (max-width: 768px) {
@@ -458,6 +458,17 @@ a {
         width:36px;
         height:36px;
     }
+
+    #shapeshifter-iframe {
+        width: calc(100vw - 64px);
+    }
+
+    /* Leave extra space for bottom bar */
+    #shapeshifter-iframe.iphone {
+        height: calc(100vh - 96px);
+    }
+
+
     .skills h3 {
         margin: 16px 0 0 0;
     }
