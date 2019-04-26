@@ -328,6 +328,7 @@ a {
     height: 128px;
     width: 128px;
     display: flex;
+    align-items: center;
 }
 
 .portfolio .logo-container {
