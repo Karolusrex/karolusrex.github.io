@@ -10,7 +10,6 @@ trigger.addEventListener("click", () => {
   iframe.src = "https://shape-shifter-app.firebaseapp.com";
 });
 
-
-if(!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)){
-  iframe.classList.add('iphone');
+if (!!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)) {
+  iframe.classList.add("iphone");
 }
