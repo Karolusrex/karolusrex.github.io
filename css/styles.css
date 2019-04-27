@@ -520,4 +520,8 @@ a {
     .phone::before, .phone::after, .graduation::before, .graduation::after, .working::before, .working::after, .keyboard::before, .keyboard::after {
         height: 224px;
     }
+
+    a {
+        text-decoration: underline;
+    }
 }
