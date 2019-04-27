@@ -464,6 +464,31 @@ a {
     display: inline-block;
 }
 
+
+a:hover:after {
+    transform: translate(0) scale(1);
+    opacity: 1
+}
+
+a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    transition: .2s;
+    background: rgb(244, 80, 154);
+    bottom: 0;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5px) scaleY(5)
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+}
 @media screen and (max-width: 576px) {
     .close-button {
         right: 4px;
