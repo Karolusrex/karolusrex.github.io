@@ -489,6 +489,11 @@ a {
     text-decoration: none;
     position: relative;
 }
+
+.timeline-expand {
+    margin: 16px 0 0 0;
+}
+
 @media screen and (max-width: 576px) {
     .close-button {
         right: 4px;
