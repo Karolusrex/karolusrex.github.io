@@ -414,10 +414,6 @@ a {
     line-height: 200%;
 }
 
-.portfolio {
-    /* Prevent flex-wrap orphanage */
-    max-width: 960px !important;
-}
 
 #shapeshifter-iframe {
     height: calc(100vh - 64px);
