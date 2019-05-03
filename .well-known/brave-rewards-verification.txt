@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: karolusrex.github.io
+Token: 03d7629b57b59b23d07c95c4c8e7f854aa7919d37dd03642216702858b7f30d9
