@@ -146,6 +146,7 @@ h3 {
     color: white;
     padding: 8px 0;
     margin: 0;
+    font-size: 24px;
 }
 
 .introduction {
@@ -449,6 +450,7 @@ a {
 .bureaucracy {
     padding: 16px 16px 8px 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px;
 }
 
 .line {
