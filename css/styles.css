@@ -7,7 +7,7 @@ html, body {
     text-align: center;
     overflow: hidden;
     overflow: hidden;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 iframe {
@@ -113,6 +113,8 @@ h3 {
 }
 
 .main-title h1 {
+    font-weight: normal;
+    letter-spacing: 2px;
     font-size: 92px;
     color: rgba(255, 255, 255, 1.0);
     margin: 64px 0 0 0;
@@ -120,8 +122,8 @@ h3 {
 
 .main-title p {
     margin: 8px;
-    font-size: 24px;
-    color: rgb(255, 255, 255);
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .call-to-action {
